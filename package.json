@@ -1,0 +1,39 @@
+{
+  "name": "@geonexus/sdk",
+  "version": "1.1.1",
+  "description": "GeoNexus SDK for TypeScript \u2014 GeoCard, GeoMCP, Registry and OGE clients (parity with the Python SDK v1.1.1)",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.json && node --test test/*.test.ts",
+    "test:only": "node --test test/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "geospatial",
+    "geomcp",
+    "geocard",
+    "oge",
+    "mcp"
+  ]
+}
